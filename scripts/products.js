@@ -1,7 +1,6 @@
 
 
-
-products = [{
+const products = [{
   id: '74774vdjd-qqiw908',
   image: 'images/products/adults-plain-cotton-tshirt-2-pack-teal.jpg',
   name: 'Plain Cotton T-shirt',
@@ -150,5 +149,15 @@ products = [{
     count: 70
   },
   priceCents: 2020
+},
+{
+  id: '644774dhd-qqew908',
+  image: 'images/products/facial-tissue-2-ply-18-boxes.jpg',
+  name: 'Facial Tissue',
+  rating: {
+    stars: 4.5,
+    count: 100
+  },
+  priceCents: 200
 },
 ]
