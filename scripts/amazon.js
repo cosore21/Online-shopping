@@ -1,4 +1,9 @@
 
+import { cart } from "./cart" 
+
+
+
+
 const addedMessageTimeouts = {}
 
 const showAddedMessage = (productId) => {
