@@ -160,4 +160,44 @@ export const products = [{
   },
   priceCents: 200
 },
+{
+  id: '100774dhd-qqew908',
+  image: 'images/products/cooker.webp',
+  name: 'Modern Electric Cooker',
+  rating: {
+    stars: 4,
+    count: 190
+  },
+  priceCents: 20000
+},
+{
+  id: '644774dhd-qqew908',
+  image: 'images/products/Hisense fridge.jpg',
+  name: 'Hisense Fridge',
+  rating: {
+    stars: 4.5,
+    count: 80
+  },
+  priceCents: 21000
+},
+{
+  id: '644774dhd-qqew908',
+  image: 'images/products/tv43inch.webp',
+  name: 'Vitron 43-Inch tv',
+  rating: {
+    stars: 5,
+    count: 188
+  },
+  priceCents: 19000
+},
+{
+  id: '644774dhd-qqew908',
+  image: 'images/products/11Pieces kitchenware.jpg',
+  name: '11 Pieces Kitchen Ware',
+  rating: {
+    stars: 4.5,
+    count: 100
+  },
+  priceCents: 9000
+},
 ]
