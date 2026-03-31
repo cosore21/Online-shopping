@@ -1,6 +1,8 @@
 
-import{cart} from './cart.js'
-import{products} from './products.js'
+import { cart, addToCart } from './cart.js'
+import { products } from './products.js'
+
+
 
 const addedMessageTimeouts = {}
 
@@ -48,6 +50,21 @@ const hideAllAddedMessages = () => {
     delete addedMessageTimeouts[productId]
   }
 }
+
+
+
+
+function updateCartQuantity() {
+  let cartQuantity = 0
+  cart.forEach((cartItem) => {
+    cartQuantity += cartItem.quantity
+  })
+
+  document.querySelector('.js-cart-quantity').textContent = cartQuantity
+}
+
+
+
 
 let productHTML = ''
 products.forEach((product) => {
@@ -113,31 +130,10 @@ document.querySelectorAll('.js-add-to-cart').forEach((button) => {
   button.addEventListener('click', () => {
     const { productId } = button.dataset
 
-    let matchingItem
-    cart.forEach((item) => {
-      if (productId === item.productId) {
-        matchingItem = item
-      }
-    })
+    addToCart(productId)
 
-    const quantitySelector = document.querySelector(`.js-quantity-selector-${productId}`).value
-    const quantity = Number(quantitySelector)
 
-    if (matchingItem) {
-      matchingItem.quantity += quantity
-    } else {
-      cart.push({
-        productId,
-        quantity,
-      })
-    }
-
-    let cartQuantity = 0
-    cart.forEach((item) => {
-      cartQuantity += item.quantity
-    })
-
-    document.querySelector('.js-cart-quantity').textContent = cartQuantity
+    updateCartQuantity()
 
     showAddedMessage(productId)
   })
