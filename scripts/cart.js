@@ -1,12 +1,12 @@
-export const cart = [
+export let cart = [
   {
     productId: "74774vdjd-qmiw978",
     quantity: 2,
   },
   {
-    productId:'94774odjd-qqiw908',
-    quantity:1
-  }
+    productId: "94774odjd-qqiw908",
+    quantity: 1,
+  },
 ];
 
 export function addToCart(productId) {
@@ -30,4 +30,14 @@ export function addToCart(productId) {
       quantity,
     });
   }
+}
+
+export function removeFromCart(productId) {
+  const newCart =[];
+  cart.forEach((cartItem) => {
+    if (cartItem.productId !== productId) {
+      newCart.push(cartItem);
+    }
+  });
+  cart = newCart;
 }
