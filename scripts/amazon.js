@@ -1,8 +1,6 @@
 
-import { cart } from './cart' 
-
-
-
+import{cart} from './cart.js'
+import{products} from './products.js'
 
 const addedMessageTimeouts = {}
 

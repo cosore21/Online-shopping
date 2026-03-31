@@ -1,6 +1,6 @@
 
 
-const products = [{
+export const products = [{
   id: '74774vdjd-qqiw908',
   image: 'images/products/adults-plain-cotton-tshirt-2-pack-teal.jpg',
   name: 'Plain Cotton T-shirt',
