@@ -2,14 +2,14 @@ export let cart = JSON.parse(localStorage.getItem("cart"));
 
 if (!cart) {
   cart = [
-    {
-      productId: "74774vdjd-qmiw978",
-      quantity: 2,
-    },
-    {
-      productId: "94774odjd-qqiw908",
-      quantity: 1,
-    },
+    // {
+    //   productId: "74774vdjd-qmiw978",
+    //   quantity: 2,
+    // },
+    // {
+    //   productId: "94774odjd-qqiw908",
+    //   quantity: 1,
+    // },
   ];
 }
 function saveToStorage() {
@@ -49,4 +49,12 @@ export function removeFromCart(productId) {
   });
   cart = newCart;
   saveToStorage();
+}
+export function calculateCartQuantity() {
+  let cartQuantity = 0;
+
+  cart.forEach((cartItem) => {
+    cartQuantity += cartItem.quantity;
+  });
+  return cartQuantity
 }

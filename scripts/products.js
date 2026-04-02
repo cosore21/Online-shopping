@@ -151,7 +151,7 @@ export const products = [{
   priceCents: 2020
 },
 {
-  id: '644774dhd-qqew908',
+  id: '64i774dhd-qqew908',
   image: 'images/products/facial-tissue-2-ply-18-boxes.jpg',
   name: 'Facial Tissue',
   rating: {
@@ -161,7 +161,7 @@ export const products = [{
   priceCents: 200
 },
 {
-  id: '100774dhd-qqew908',
+  id: '1l0774dhd-qqew908',
   image: 'images/products/cooker.webp',
   name: 'Modern Electric Cooker',
   rating: {
@@ -171,7 +171,7 @@ export const products = [{
   priceCents: 20000
 },
 {
-  id: '644774dhd-qqew908',
+  id: '64c774dhd-qqew908',
   image: 'images/products/Hisense fridge.jpg',
   name: 'Hisense Fridge',
   rating: {
@@ -181,7 +181,7 @@ export const products = [{
   priceCents: 21000
 },
 {
-  id: '644774dhd-qqew908',
+  id: '64a774dhd-qqew908',
   image: 'images/products/tv43inch.webp',
   name: 'Vitron 43-Inch tv',
   rating: {
@@ -191,7 +191,7 @@ export const products = [{
   priceCents: 19000
 },
 {
-  id: '644774dhd-qqew908',
+  id: '6a4774dhd-qqew908',
   image: 'images/products/11Pieces kitchenware.jpg',
   name: '11 Pieces Kitchen Ware',
   rating: {
