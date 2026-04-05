@@ -1,15 +1,21 @@
+
+
 export let cart = JSON.parse(localStorage.getItem("cart"));
 
 if (!cart) {
   cart = [
-    // {
-    //   productId: "74774vdjd-qmiw978",
-    //   quantity: 2,
-    // },
-    // {
-    //   productId: "94774odjd-qqiw908",
-    //   quantity: 1,
-    // },
+    {
+      productId: "74774vdjd-qmiw978",
+      quantity: 2,
+      deliveryOptionId: "1",
+      priceCents: 499,
+    },
+    {
+      productId: "94774odjd-qqiw908",
+      quantity: 1,
+      deliveryOptionId: "2",
+      priceCents: 999,
+    },
   ];
 }
 function saveToStorage() {
