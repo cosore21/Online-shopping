@@ -8,7 +8,7 @@ import {
 import { products,getProducts } from "../scripts/products.js";
 import { formatCurrency } from "../utils/money.js";
 import dayjs from "https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js";
-
+import { renderPaymentSummary } from "./paymentSummary.js";
 import { deliveryOptions,getDeliveryOption } from "../data/deliveryOption.js";
 
 export function renderOrderSummary() {
@@ -132,6 +132,7 @@ export function renderOrderSummary() {
       );
 
       container.remove();
+      renderPaymentSummary()
       updateCartQuantity();
     });
   });
@@ -206,6 +207,7 @@ export function renderOrderSummary() {
       updateDeliveryOption(productId, deliveryOptionId);
       //recursion
       renderOrderSummary();
+      renderPaymentSummary()
     });
   });
 }
