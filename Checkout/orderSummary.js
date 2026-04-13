@@ -5,11 +5,15 @@ import {
   updateDeliveryOption,
   updateQuantity,
 } from "../scripts/cart.js";
-import { products,getProducts } from "../scripts/products.js";
+import { products, getProducts } from "../scripts/products.js";
 import { formatCurrency } from "../utils/money.js";
-import dayjs from "https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js";
+//import dayjs from "https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js";
 import { renderPaymentSummary } from "./paymentSummary.js";
-import {calculatedeliveryDate, deliveryOptions,getDeliveryOption } from "../data/deliveryOption.js";
+import {
+  calculatedeliveryDate,
+  deliveryOptions,
+  getDeliveryOption,
+} from "../data/deliveryOption.js";
 import { renderCheckoutHeader } from "./checkoutHeader.js";
 export function renderOrderSummary() {
   let cartSummaryHTML = "";
@@ -17,13 +21,13 @@ export function renderOrderSummary() {
   cart.forEach((cartItem) => {
     const productId = cartItem.productId;
 
-    const matchingProduct=getProducts(productId)
+    const matchingProduct = getProducts(productId);
 
     if (!matchingProduct) {
       return;
     }
 
-     const deliveryOptionId = cartItem.deliveryOptionId;
+    const deliveryOptionId = cartItem.deliveryOptionId;
 
     // let deliveryOption;
     // deliveryOptions.forEach((option) => {
@@ -31,9 +35,9 @@ export function renderOrderSummary() {
     //     deliveryOption = option;
     //   }
     // });
-    const deliveryOption =getDeliveryOption(deliveryOptionId);
+    const deliveryOption = getDeliveryOption(deliveryOptionId);
 
-    const dateString=calculatedeliveryDate(deliveryOption)
+    const dateString = calculatedeliveryDate(deliveryOption);
 
     // const today = dayjs();
     // const dateString = today
@@ -80,7 +84,7 @@ export function renderOrderSummary() {
               </div>
             </div>
           </div>
-    
+
     `;
   });
 
@@ -93,7 +97,7 @@ export function renderOrderSummary() {
       //   .format("dddd, MMMM D");
 
       // const dateString = deliveryDate.format('dddd, MMMM D');
-const dateString=calculatedeliveryDate(deliveryOption)
+      const dateString = calculatedeliveryDate(deliveryOption);
       const priceString =
         deliveryOption.priceCents === 0
           ? "FREE Shipping"
@@ -134,9 +138,9 @@ const dateString=calculatedeliveryDate(deliveryOption)
       // );
 
       // container.remove();
-      renderCheckoutHeader()
-      renderOrderSummary()
-      renderPaymentSummary()
+      renderOrderSummary();
+      renderCheckoutHeader();
+      renderPaymentSummary();
       updateCartQuantity();
     });
   });
@@ -210,7 +214,7 @@ const dateString=calculatedeliveryDate(deliveryOption)
       updateDeliveryOption(productId, deliveryOptionId);
       //recursion
       renderOrderSummary();
-      renderPaymentSummary()
+      renderPaymentSummary();
     });
   });
 }
