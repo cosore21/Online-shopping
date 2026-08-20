@@ -37,6 +37,8 @@ export function calculatedeliveryDate(deliveryOption){
         deliveryDate=deliveryDate.add(1,'day');
         if(!isWeekend(deliveryDate)){
             remainingDays--;
+            // This is a short cut
+            //  for the remaining days
         }
     }
         const dateString=deliveryDate.format("dddd, MMMM D");
