@@ -10,6 +10,9 @@ describe("test suite: formatCurrency", () => {
   it('rounds up to the nearest', () => {
     expect(formatCurrency(2000.5)).toEqual('20.01')
   })
+  it('add All',()=>{
+    expect(formatCurrency(6789)).toEqual('67.89')
+  })
 });
 
 
