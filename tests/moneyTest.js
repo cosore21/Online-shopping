@@ -1,36 +1,32 @@
-//import { formatCurrency } from "../utils/money";
-console.log('Test Suite: Format Currency');
+import { formatCurrency } from '../utils/money.js';
 
-console.log('convert cents to dollars');
+
+console.log('Test suite; Format Currency');
+
+console.log('converts cents into dollars');
 
 if(formatCurrency(2095)==='20.95'){
-    console.log('passed');
-    
+console.log('passed');
+
 }else{
     console.log('failed');
     
 }
 console.log('works with zero');
 
-
-if(formatCurrency(0)==='0.00'){
-    console.log('passed');
-    
+if (formatCurrency(0)==0.00) {
+  console.log('pass');
+  
 }else{
-    console.log('Failed');
-    
+  console.log('fail');
+  
 }
-console.log('rounds up to the nearest cant');
+console.log('rounds up to the nearest cents');
 
-if(formatCurrency(2000.4)==='20.01'){
-      console.log('passed');
-    
+if (formatCurrency(2000.8)==='20.01') {
+  console.log('passed');
+  
 }else{
-    console.log('Failed');
+    console.log('failed');
     
-
-}
-
-export function formatCurrency(priceCents) {
-  return (Math.round(priceCents) / 100).toFixed(2);
 }
