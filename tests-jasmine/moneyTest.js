@@ -7,9 +7,9 @@ describe("test suite: formatCurrency", () => {
   it("works with zero", () => {
     expect(formatCurrency(0)).toEqual("0.00");
   });
-it('rounds up to the nearest',()=>{
+  it('rounds up to the nearest', () => {
     expect(formatCurrency(2000.5)).toEqual('20.01')
-})
+  })
 });
 
 
